@@ -1,0 +1,21 @@
+services:
+  # Host the files of the site on port 8089
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8091:80
+    volumes:
+      - ./site/:/usr/share/nginx/html
+    restart: unless-stopped
+  # Hook nginx exposed port onto the web
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    depends_on:
+      - nginx
+    profiles:
+      - prod
+    restart: unless-stopped
+    command: "tunnel --no-autoupdate run --token ${TUNNEL_TOKEN} --url 'http://localhost:8091'"
+    env_file:
+      - .env
+    network_mode: "host" # Ensures it can connect to services on localhost
