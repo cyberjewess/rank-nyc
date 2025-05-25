@@ -11,20 +11,30 @@ Hey, what are you doing here?
 -->
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+
+		:root {
+			--bg: #434;
+			--white: #fff;
+			--pink: #F679E5;
+			--orange: #FF9F1C;
+		}
+
 		body {
-			background-color: #434;
-			color: white;
+			background-color: var(--bg);
+			color: var(--white);
 			font-family: sans-serif;
 			text-align: center;
 		}
 
 		a {
-			color: pink;
+			color: var(--pink);
+			text-decoration: none;
 		}
 
 		h3 {
-			color: #dbd;
+			color: var(--orange);
 		}
 
 		.header {
@@ -47,18 +57,14 @@ Hey, what are you doing here?
 			padding-left: 3.3rem;
 		}
 
-		.whisper {
-
-			font-size: 0.4rem;
-		}
 	</style>
 </head>
 
 <body>
 	<div class="header">
-		<h1>RANKED CHOICE EXPLAINED</h1>
-		<h2>NYC Democratic primary voting</h2>
-		<h2>June 12 - 24</h2>
+		<h3>Ranked Choice Voting (RCV) Explained</h3>
+		<h2>NYC Democratic Primary</h2>
+		<h2>June 14-24, 2025</h2>
 	</div>
 	<div class="content">
 		<a href="https://www.nycvotes.org/how-to-vote/ranked-choice-voting/">
@@ -76,7 +82,7 @@ Hey, what are you doing here?
 		</p>
 
 		<p>
-			Otherwise: Drop the last place candidate and <b>move those ballots</b> to each voter’s
+			Otherwise: Drop the last place candidate and <b>move those ballots</b> to each voter's
 			next choice, if they have one. Repeat until a candidate passes 50%.
 		</p>
 		<h3><i>WHO SHOULD I VOTE FOR?</i></h3>
@@ -115,10 +121,17 @@ Hey, what are you doing here?
 			<a href="https://dreamfornyc.com/">
 				Whatever you do,
 			</a>
+			DON'T put
 			<a href="https://en.wikipedia.org/wiki/New_York_COVID-19_nursing_home_scandal">
-				do NOT put Andrew Cuomo on your ballot!
+				Andrew Cuomo
 			</a>
+			on your ballot!
 		</h1>
 
+		<video width=100% controls>
+			<source src="rank.mov" typ="video/mov"/>
+		</video>
+
+		<p>This site is run by a passionate individual not associated with any political campaign!</p>
 	</div>
 </body>
